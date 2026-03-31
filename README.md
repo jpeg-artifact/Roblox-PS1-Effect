@@ -21,7 +21,8 @@ This model is just a proff of concept. It is not intended for a live game. It ha
 The scripts creates a Part that the SurfaceGui is adorneed to. A SurfaceGui is used to lower the resolution of the screen. In the SurfaceGui there is a ViewportFrame with a WorldModel where everything with the Render tag is cloned to. Everything in the WorldModel is offset by a WobbleStrength on all axis to achieve the vertex wobble effect. The dither effect is just an image overlay that matches the resolution of the SurfaceGui. Everything is dynamic and can be changed at runtime.
 
 # Script to setup automatically:
-Run this code in the Command Bar to automatically add everything in the right place. **ALWAYS CHECK CODE BEFORE RUNNING IT IN STUDIO**
+Run this code in the Command Bar to automatically add everything in the right place. 
+**ALWAYS CHECK CODE BEFORE RUNNING IT IN STUDIO**
 ```lua
 local InsertService = game:GetService("InsertService")
 local ServerStorage = game:GetService("ServerStorage")
@@ -66,3 +67,5 @@ renderSurfaceGui.Parent = StarterGui
 
 insertedModel:Destroy()
 ```
+# Manual setup:
+Use the Roblox asset: [Link to Roblox asset store (it's free)](https://create.roblox.com/store/asset/129499380745272/PS1-Effect) or download the "Setup Model" from this git.
