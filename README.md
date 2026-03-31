@@ -12,8 +12,7 @@ This model is just a proff of concept. It is not intended for a live game. It ha
 2. Place "RenderView" in StarterPlayer
 3. Place "DitherScreenGui" in StarterGui
 4. Place "RenderSurfaceGui" in StarterGui
-5. Place "TagList" in ServerStorage
-  5.1. If you have a "TagList" folder in ServerStorage, place the tags in that folder
+5. Place "TagList" in ServerStorage. If you have a "TagList" folder in ServerStorage, place the tags in that folder
 6. Tag everything you want to be visible to the player with the "Render" tag. Anything that you intend to never move can be tagged with the "Static" tag to save on performance.
 7. You can change the resolution by changing the "VerticalResolution" IntValue in the "Values" Folder and the wobble strength by changing "WobbleStrength" in the "Values" folder.
 8. Delete the PS1Effect model with this READ ME script.
