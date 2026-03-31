@@ -1,6 +1,7 @@
 # What it does:
 This model adds a PS1 effect to your Roblox game with some limitations.
-
+![preview](Images/Thumbnail.png)
+[Test game (PS1 Merge!)](https://www.roblox.com/games/98847863076743/PS1-Merge)
 # What it **does not** do:
 Instances that affect the children of it's parent (e.g. BodyColor, Shirts, Pants, etc.) do not work. This is a limitation with the implementation. This can be fixed, I just don't have the motivation to do so.
 
