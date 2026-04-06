@@ -14,7 +14,6 @@ local renderWorldModel : WorldModel = renderViewportFrame:WaitForChild("WorldMod
 local viewportCamera : Camera = Instance.new("Camera")
 
 local renderViewPart : Part = Instance.new("Part")
-renderViewPart.Size = Vector3.new(1, 1, 0.1)
 renderViewPart.Transparency = 1
 renderViewPart.Anchored = true
 renderViewPart.CanCollide = false
@@ -26,7 +25,8 @@ renderViewPart.Parent = workspace
 renderSurfaceGui.Adornee = renderViewPart
 
 local renderList : {[PVInstance] : PVInstance} = {}
-local distanceFromCameraInStuds : number = 5
+local distanceFromCameraInStuds : number = 0.11
+renderViewPart.Size = Vector3.new(1, 1, 0.001)
 
 renderViewportFrame.CurrentCamera = viewportCamera
 
@@ -99,7 +99,13 @@ local function updateDitherTileSize()
 	ditherImageLabel.TileSize = UDim2.new(0, tileSizeInPixels, 0, tileSizeInPixels)
 end
 
+local function updateAlwaysOnTop()
+	renderSurfaceGui.AlwaysOnTop = ReplicatedStorage.Values.AlwaysOnTop.Value
+	renderSurfaceGui.LightInfluence = ReplicatedStorage.Values.AlwaysOnTop.Value and 1 or 0
+end
+
 local function updateRenderView()
+	updateAlwaysOnTop()
 	updateRenderViewPart()
 	updateSurfaceGuiResolution()
 	updateDitherTileSize()
