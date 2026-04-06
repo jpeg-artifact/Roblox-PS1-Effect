@@ -18,6 +18,8 @@ This model is just a proff of concept. It is not intended for a live game. It ha
 7. You can change the resolution by changing the "VerticalResolution" IntValue in the "Values" Folder and the wobble strength by changing "WobbleStrength" in the "Values" folder.
 8. Delete the PS1Effect model with this READ ME script.
 
+If you want to apply post-processing effects, make sure that the "AlwaysOnTop" values is set to false. This can cause the effect to clip when objects are less than 0.11 studs away from the  camera.
+
 # How it works:
 The scripts creates a Part that the SurfaceGui is adorneed to. A SurfaceGui is used to lower the resolution of the screen. In the SurfaceGui there is a ViewportFrame with a WorldModel where everything with the Render tag is cloned to. Everything in the WorldModel is offset by a WobbleStrength on all axis to achieve the vertex wobble effect. The dither effect is just an image overlay that matches the resolution of the SurfaceGui. Everything is dynamic and can be changed at runtime.
 
